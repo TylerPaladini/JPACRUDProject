@@ -23,8 +23,8 @@ DROP TABLE IF EXISTS `megafauna` ;
 CREATE TABLE IF NOT EXISTS `megafauna` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `Latin Scientific` VARCHAR(45) NOT NULL,
-  `Description` TEXT BINARY NULL,
+  `latin_scientific` VARCHAR(45) NOT NULL,
+  `description` TEXT BINARY NULL,
   `weight` INT NULL,
   `size` VARCHAR(45) NULL,
   `diet` VARCHAR(200) NULL,
@@ -49,9 +49,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `megafaunadb`;
-INSERT INTO `megafauna` (`id`, `name`, `Latin Scientific`, `Description`, `weight`, `size`, `diet`, `habitat`, `region`) VALUES (1, 'Bear', 'test', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `megafauna` (`id`, `name`, `Latin Scientific`, `Description`, `weight`, `size`, `diet`, `habitat`, `region`) VALUES (2, 'lion', 'test', NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `megafauna` (`id`, `name`, `Latin Scientific`, `Description`, `weight`, `size`, `diet`, `habitat`, `region`) VALUES (3, 'camel', 'test', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `megafauna` (`id`, `name`, `latin_scientific`, `description`, `weight`, `size`, `diet`, `habitat`, `region`) VALUES (1, 'Bear', 'test', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `megafauna` (`id`, `name`, `latin_scientific`, `description`, `weight`, `size`, `diet`, `habitat`, `region`) VALUES (2, 'lion', 'test', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `megafauna` (`id`, `name`, `latin_scientific`, `description`, `weight`, `size`, `diet`, `habitat`, `region`) VALUES (3, 'camel', 'test', NULL, NULL, NULL, NULL, NULL, NULL);
 
 COMMIT;
 
