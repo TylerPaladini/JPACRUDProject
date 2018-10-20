@@ -31,7 +31,8 @@ class MegafaunaTests {
 	@DisplayName("test megafauna entity is connected with database")
 	void test() {
 		Megafauna megafauna = em.find(Megafauna.class, 1);
-		// finish test
+		assertEquals("Bear", megafauna.getName());
+		assertEquals("test", megafauna.getLatinScientific());
 		
 	}
 

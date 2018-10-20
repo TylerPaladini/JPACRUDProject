@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `megafauna` ;
 CREATE TABLE IF NOT EXISTS `megafauna` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `latin_scientific` VARCHAR(45) NOT NULL,
+  `latin_scientific` VARCHAR(45) NULL,
   `description` TEXT BINARY NULL,
   `weight` INT NULL,
   `size` VARCHAR(45) NULL,
