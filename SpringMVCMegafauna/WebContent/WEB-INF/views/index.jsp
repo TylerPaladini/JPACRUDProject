@@ -23,12 +23,20 @@
   Latin Scientific:<br>
   <input type="text" name="latinScientific" value=""><br><br>
   Description:<br>
-  <input type="text" name="latinScientific" value=""><br><br>
-  <input type="text" name="latinScientific" value=""><br><br>
-  <input type="text" name="latinScientific" value=""><br><br>
-  <input type="text" name="latinScientific" value=""><br><br>
-  <input type="submit" value="Submit">
+  <input type="text" name="description" value=""><br><br>
+  Weight:<br>
+  <input type="text" name="weight" value=""><br><br>
+  Size:<br>
+  <input type="text" name="size" value=""><br><br>
+  Diet:<br>
+  <input type="text" name="diet" value=""><br><br>
+  Habitat:<br>
+  <input type="text" name="habitat" value=""><br><br>
+  Region:<br>
+  <input type="text" name="region" value=""><br><br>
+  <input type="submit" value="Create">
 </form>
+  
 
 <h4>Delete</h4>
 <form action="deletemega.do" method="POST">
@@ -36,6 +44,22 @@ What ID to delete:<br>
 <input type="text" name="id" value=""><br>
 <input type="Submit" value="Submit">
 </form>
+
+
+<h4>Update</h4>
+<form action="update.do" method="POST">
+What to update:
+id:
+<input type="text" name="id" value=""><br>
+
+<input type="Submit" value="Update">
+
+
+
+
+</form>
+
+
 
 
 </body>

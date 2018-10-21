@@ -26,10 +26,10 @@ CREATE TABLE IF NOT EXISTS `megafauna` (
   `latin_scientific` VARCHAR(45) NULL,
   `description` TEXT BINARY NULL,
   `weight` INT NULL,
-  `size` VARCHAR(45) NULL,
+  `size` VARCHAR(200) NULL,
   `diet` VARCHAR(200) NULL,
   `habitat` VARCHAR(350) NULL,
-  `region` VARCHAR(45) NULL,
+  `region` VARCHAR(200) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

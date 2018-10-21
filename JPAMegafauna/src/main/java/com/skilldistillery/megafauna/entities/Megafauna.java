@@ -64,10 +64,10 @@ public class Megafauna {
 		public void setDescription(String description) {
 			this.description = description;
 		}
-		public int getWeight() {
+		public Integer getWeight() {
 			return weight;
 		}
-		public void setWeight(int weight) {
+		public void setWeight(Integer weight) {
 			this.weight = weight;
 		}
 		public String getSize() {

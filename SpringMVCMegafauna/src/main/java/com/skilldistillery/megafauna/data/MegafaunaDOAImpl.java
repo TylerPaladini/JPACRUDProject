@@ -20,7 +20,7 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 
 	@Override
 	public Megafauna findById(int id) {
-		Megafauna megafauna = em.find(Megafauna.class, 1);
+		Megafauna megafauna = em.find(Megafauna.class, id);
 		
 	
 		return megafauna;
@@ -28,9 +28,13 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 	}
 	@Override
 	public List<Megafauna> showAll(Megafauna megafauna) {
-	
+		
+		
 		
 		return null;
+	
+		
+		
 	}
 	
 	
@@ -47,20 +51,19 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 	public Boolean update(int id, Megafauna megafauna) {
 		Megafauna updateMega = em.find(Megafauna.class, id);
 		
-		if(updateMega != null) {
-			updateMega.getName();
-			updateMega.getLatinScientific();
-			updateMega.getDescription();
-			updateMega.getWeight();
-			updateMega.getSize();
-			updateMega.getDiet();
-			updateMega.getHabitat();
-			updateMega.getRegion();
+		
+			megafauna.setName(updateMega.getName());
+			megafauna.setLatinScientific(updateMega.getLatinScientific());
+			megafauna.setDescription(updateMega.getDescription());
+			megafauna.setWeight(updateMega.getWeight());
+			megafauna.setSize(updateMega.getSize());
+			megafauna.setDiet(updateMega.getDiet());
+			megafauna.setHabitat(updateMega.getHabitat());
+			megafauna.setRegion(updateMega.getRegion());
 			
-		}
 		
 		
-		em.close();
+		
 		return null;
 		
 		

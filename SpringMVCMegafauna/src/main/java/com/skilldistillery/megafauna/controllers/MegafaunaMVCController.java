@@ -79,7 +79,7 @@ public class MegafaunaMVCController {
 		megafaunaDAO.update(id, updateMega);
 		mv.setViewName("redirect:updated.do");
 		
-		return null;
+		return mv;
 		
 	}
 	
@@ -87,13 +87,15 @@ public class MegafaunaMVCController {
 	public ModelAndView updated() {
 		ModelAndView mv = new ModelAndView();
 		
-		mv.setViewName("WEB-INF/views/confirmation.jsp");
+		mv.setViewName("WEB-INF/views/update.jsp");
 		
 		
 		return mv;
 		
 		
 	}
+	
+	
 	
 	
 	
