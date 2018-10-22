@@ -6,20 +6,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>North American Pleistocene Megafauna</title>
 </head>
 <body>
 
-<img id="homephoto" alt="" src="https://i.pinimg.com/originals/f1/ec/9a/f1ec9a1c85ed37dc5428c107b820b589.jpg">
+<img id="homephoto" alt="" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2eb40f34094122.56c3d0503f08d.jpgs">
+<h3>North American Pleistocene Megafauna</h3>
 
-<h1>TEST</h1>
+<h5> Show All Megafauna in Database</h5>
+<form action="list.do" method="GET">
+<input type="Submit" value="Show All">
 
+<h5>Choose Megafauna with ID#:</h5>
 <form action="getmega.do" method="GET">
   <input type="text" name="id"/>
-  <input type="submit" value="Find Megafauna BY ID"/>
+  <input type="submit" value="Find"/>
 </form>
 
-<h4>Create</h4>
+<h5>Create Your Own Megafauna</h5>
 <form action="createmega.do" method="POST">
   Name:<br>
   <input type="text" name="name" value=""><br>
@@ -41,16 +45,13 @@
 </form>
   
 
-<h4>Delete</h4>
+<h5>Delete From the Database</h5>
 <form action="deletemega.do" method="POST">
 What ID to delete:<br>
 <input type="text" name="id" value=""><br>
-<input type="Submit" value="Submit">
+<input type="Submit" value="Delete">
 </form>
 
-<h4> Show All Megafauna in Database</h4>
-<form action="list.do" method="GET">
-<input type="Submit" value="Show ALl">
 
 
 </form>
