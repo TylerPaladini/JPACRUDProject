@@ -18,7 +18,7 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 	@PersistenceContext
 	private EntityManager em;
 
-	@Override
+	@Override  // Locate megafauna using ID
 	public Megafauna findById(int id) {
 		Megafauna megafauna = em.find(Megafauna.class, id);
 		
@@ -46,7 +46,7 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 	}
 	
 	
-	@Override
+	@Override  // create a new megafauna
 	public Megafauna create(Megafauna megafauna) {
 		em.persist(megafauna);
 		em.flush();
@@ -55,7 +55,7 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 		return null;
 	}
 
-	@Override
+	@Override    // update existing megafauna
 	public Boolean update (int id, Megafauna newMegafauna) {
 		
 		Megafauna toBeUpdateMega = em.find(Megafauna.class, id);
@@ -94,7 +94,7 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 		
 	}
 
-	@Override
+	@Override  // delete megafauna from database table
 	public Boolean delete(int id) {
 		Megafauna mega = em.find(Megafauna.class, id);
 		

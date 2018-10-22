@@ -117,7 +117,7 @@ public class MegafaunaMVCController {
 	
 	
 	
-
+      
 	@RequestMapping(path = "home.do", method = RequestMethod.GET)
 	public String index() {
 		return "WEB-INF/views/index.jsp";
