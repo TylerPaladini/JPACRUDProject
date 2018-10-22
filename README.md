@@ -26,6 +26,7 @@ When using setters and getters, ensure that the passed in object and the object 
 
 ##Future Goals:
 
+-Add mulitple ways for the user to search and delete data from the database table
 -Create a better README
 -Add styling through CSS to create a program that is visually appealing
 -Learn how to attach individual pictures to the different megafauna inside the database
