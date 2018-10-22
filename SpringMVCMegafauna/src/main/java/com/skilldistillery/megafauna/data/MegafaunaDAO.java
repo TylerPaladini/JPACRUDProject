@@ -8,7 +8,7 @@ public interface MegafaunaDAO {
 	
 	public Megafauna findById(int id);
 	
-	public List<Megafauna> showAll(Megafauna megafauna);
+	public List<Megafauna> showAll();
 
 	public Megafauna create(Megafauna megafauna);
 	

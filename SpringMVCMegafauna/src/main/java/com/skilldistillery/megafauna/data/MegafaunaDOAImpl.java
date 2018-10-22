@@ -27,11 +27,19 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 		
 	}
 	@Override
-	public List<Megafauna> showAll(Megafauna megafauna) {
+	public List<Megafauna> showAll() {
+		//LIST ALL MEGAFAUNA
+	   
+	        
+	        String queryStr = "SELECT mega FROM Megafauna mega";
+	        List<Megafauna> listMegas = em.createQuery(queryStr, Megafauna.class).getResultList();
+	        
+	       
+	    
 		
 		
 		
-		return null;
+		return listMegas;
 	
 		
 		
@@ -48,18 +56,31 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 	}
 
 	@Override
-	public Boolean update(int id, Megafauna megafauna) {
-		Megafauna updateMega = em.find(Megafauna.class, id);
+	public Boolean update (int id, Megafauna newMegafauna) {
+		
+		Megafauna toBeUpdateMega = em.find(Megafauna.class, id);
+		
+	
 		
 		
-			megafauna.setName(updateMega.getName());
-			megafauna.setLatinScientific(updateMega.getLatinScientific());
-			megafauna.setDescription(updateMega.getDescription());
-			megafauna.setWeight(updateMega.getWeight());
-			megafauna.setSize(updateMega.getSize());
-			megafauna.setDiet(updateMega.getDiet());
-			megafauna.setHabitat(updateMega.getHabitat());
-			megafauna.setRegion(updateMega.getRegion());
+//		
+//			megafauna.setName(updateMega.getName());
+//			megafauna.setLatinScientific(updateMega.getLatinScientific());
+//			megafauna.setDescription(updateMega.getDescription());
+//			megafauna.setWeight(updateMega.getWeight());
+//			megafauna.setSize(updateMega.getSize());
+//			megafauna.setDiet(updateMega.getDiet());
+//			megafauna.setHabitat(updateMega.getHabitat());
+//			megafauna.setRegion(updateMega.getRegion());
+			
+			toBeUpdateMega.setName(newMegafauna.getName());
+			toBeUpdateMega.setLatinScientific(newMegafauna.getLatinScientific());
+			toBeUpdateMega.setDescription(newMegafauna.getDescription());
+			toBeUpdateMega.setWeight(newMegafauna.getWeight());
+			toBeUpdateMega.setSize(newMegafauna.getSize());
+			toBeUpdateMega.setDiet(newMegafauna.getSize());
+			toBeUpdateMega.setHabitat(newMegafauna.getHabitat());
+			toBeUpdateMega.setRegion(newMegafauna.getHabitat());
 			
 		
 		

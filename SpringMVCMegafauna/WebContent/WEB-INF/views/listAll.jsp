@@ -8,14 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h4>List of All Megafauna</h4>
 
-Your Megafauna was deleted
+<c:forEach items="${megas }" var="mega">
+
+<p>ID: ${mega.id} Name: ${mega.name}</p>
+
+</c:forEach>
 
 <form action="home.do" method="GET">
 <input type="Submit" value="home">
 
-</form>
 
+</form>
 
 </body>
 </html>

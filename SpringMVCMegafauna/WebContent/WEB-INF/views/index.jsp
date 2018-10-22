@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <link rel="stylesheet" href="styleSheets/indexStyleSheet.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<img id="homephoto" alt="" src="https://i.pinimg.com/originals/f1/ec/9a/f1ec9a1c85ed37dc5428c107b820b589.jpg">
 
 <h1>TEST</h1>
 
@@ -25,7 +28,7 @@
   Description:<br>
   <input type="text" name="description" value=""><br><br>
   Weight:<br>
-  <input type="text" name="weight" value=""><br><br>
+  <input type="number" name="weight" value=""><br><br>
   Size:<br>
   <input type="text" name="size" value=""><br><br>
   Diet:<br>
@@ -45,14 +48,12 @@ What ID to delete:<br>
 <input type="Submit" value="Submit">
 </form>
 
+<h4> Show All Megafauna in Database</h4>
+<form action="list.do" method="GET">
+<input type="Submit" value="Show ALl">
 
-<h4>Update</h4>
-<form action="update.do" method="POST">
-What to update:
-id:
-<input type="text" name="id" value=""><br>
 
-<input type="Submit" value="Update">
+</form>
 
 
 

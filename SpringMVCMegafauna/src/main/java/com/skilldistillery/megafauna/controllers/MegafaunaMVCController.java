@@ -73,10 +73,13 @@ public class MegafaunaMVCController {
 	
 	// Update Megafauna
 	@RequestMapping(path = "update.do", method = RequestMethod.POST)
-	public ModelAndView update(int id, Megafauna updateMega) {
+	public ModelAndView update(Megafauna updateMega, int id) {
 		ModelAndView mv = new ModelAndView();
+		System.out.println(id);
+		System.out.println(updateMega.getName());
 		
 		megafaunaDAO.update(id, updateMega);
+		
 		mv.setViewName("redirect:updated.do");
 		
 		return mv;
@@ -87,7 +90,7 @@ public class MegafaunaMVCController {
 	public ModelAndView updated() {
 		ModelAndView mv = new ModelAndView();
 		
-		mv.setViewName("WEB-INF/views/update.jsp");
+		mv.setViewName("WEB-INF/views/confirmation.jsp");
 		
 		
 		return mv;
@@ -96,6 +99,21 @@ public class MegafaunaMVCController {
 	}
 	
 	
+	//LIST ALL MEGAS
+    @RequestMapping(path="list.do", method= RequestMethod.GET)
+    public ModelAndView listAllMegafauna() {
+        ModelAndView mv = new ModelAndView();
+        
+        List<Megafauna> listMegas = megafaunaDAO.showAll();
+        
+        mv.addObject("megas", listMegas);
+        mv.setViewName("WEB-INF/views/listAll.jsp");
+        
+        return mv;
+        
+    }
+
+    
 	
 	
 	
