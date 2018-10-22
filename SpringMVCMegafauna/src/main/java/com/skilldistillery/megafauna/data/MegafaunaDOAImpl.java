@@ -94,7 +94,7 @@ public class MegafaunaDOAImpl implements MegafaunaDAO {
 		
 	}
 
-	@Override  // delete megafauna from database table
+	@Override  // delete megafauna from database tables
 	public Boolean delete(int id) {
 		Megafauna mega = em.find(Megafauna.class, id);
 		

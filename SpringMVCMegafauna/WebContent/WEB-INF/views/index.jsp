@@ -10,13 +10,13 @@
 </head>
 <body>
 
-<img id="homephoto" alt="" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2eb40f34094122.56c3d0503f08d.jpgs">
+<img id="homephoto" alt="" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/2eb40f34094122.56c3d0503f08d.jpg">
 <h3>North American Pleistocene Megafauna</h3>
 
 <h5> Show All Megafauna in Database</h5>
 <form action="list.do" method="GET">
 <input type="Submit" value="Show All">
-
+</form>
 <h5>Choose Megafauna with ID#:</h5>
 <form action="getmega.do" method="GET">
   <input type="text" name="id"/>
